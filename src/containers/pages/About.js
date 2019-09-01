@@ -11,21 +11,19 @@ const Text = styled.p`
 `
 
 const data = [
-    ["Nick","Nothing at all"],
-    ["Nick","Nothing at all"],
-    ["Nick","Nothing at all"],
-    ["Nick","Nothing at all"],
-    ["Nick","Nothing at all"],
-    ["Nick","Nothing at all"],
+    ["Nick", "Nothing at all"],
+    ["Nick", "Nothing at all"],
+    ["Nick", "Nothing at all"],
+    ["Nick", "Nothing at all"],
+    ["Nick", "Nothing at all"],
+    ["Nick", "Nothing at all"],
 ]
 
-export default About  => <Page title="About RACTF">
-        <Text>RACTF is [insert a bit of interesting text here]</Text>
+export default () => <Page title={"About RACTF"}>
+    <Text>RACTF is [insert a bit of interesting text here]</Text>
 
     <HR />
 
     <SectionH2>Staff</SectionH2>
     <Table headings={["Member", "Contribution"]} data={data} noSort></Table>
-
-
 </Page>
