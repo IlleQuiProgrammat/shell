@@ -4,7 +4,9 @@ import styled from "styled-components";
 import Page from "../bases/Page";
 import theme from "theme";
 
-const Button = styled.div`
+import {Link} from "react-router-dom";
+
+const Button = styled(Link)`
     width: 250px;
     height: 100px;
     background-color: ${theme.bg_d2};
@@ -12,6 +14,11 @@ const Button = styled.div`
     margin: 10px;
     font-size: 1.5rem;
     flex-shrink: 1;
+
+    && {
+        text-decoration: none;
+        color: white;        
+    }
 `
 const Buttons = styled.div`
     display: flex;
@@ -25,11 +32,11 @@ const Buttons = styled.div`
 export default () => <Page title={'Admin Panel'}>
 
     <Buttons>
-        <Button to={"alerts"} main>Manage Alerts</Button>
-        <Button>Manage Members</Button>
-        <Button>Challenge Editor</Button>
-        <Button>Docker Status</Button>
-        <Button>Access Support</Button>
+        <Button to={"/admin/alerts"}>Manage Alerts</Button>
+        <Button to={"/admin/members"}>Manage Members</Button>
+        <Button to={"/admin/challenges"}>Challenge Editor</Button>
+        <Button to={"/admin/docker"}>Docker Status</Button>
+        <Button to={"/admin/support"}>Access Support</Button>
     </Buttons>
 
 </Page>
