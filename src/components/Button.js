@@ -38,6 +38,16 @@ const Button = styled.button`
             text-decoration: none;
         }
     `}
+
+    ${props => props.admin && css`
+        padding: 0;
+        width: 250px;
+        height: 100px;
+        background-color: ${theme.bg_d2};
+        margin: 10px;
+        font-size: 1.5rem;
+`}
+
 `;
 const NoUnderline = styled(Link)`
     && {

@@ -4,22 +4,8 @@ import styled from "styled-components";
 import Page from "../bases/Page";
 import theme from "theme";
 
-import {Link} from "react-router-dom";
+import Button from "../../../components/Button.js"
 
-const Button = styled(Link)`
-    width: 250px;
-    height: 100px;
-    background-color: ${theme.bg_d2};
-    line-height: 100px;
-    margin: 10px;
-    font-size: 1.5rem;
-    flex-shrink: 1;
-
-    && {
-        text-decoration: none;
-        color: white;        
-    }
-`
 const Buttons = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -32,11 +18,11 @@ const Buttons = styled.div`
 export default () => <Page title={'Admin Panel'}>
 
     <Buttons>
-        <Button to={"/admin/alerts"}>Manage Alerts</Button>
-        <Button to={"/admin/members"}>Manage Members</Button>
-        <Button to={"/admin/challenges"}>Challenge Editor</Button>
-        <Button to={"/admin/docker"}>Docker Status</Button>
-        <Button to={"/admin/support"}>Access Support</Button>
+        <Button to={"/admin/alerts"} admin>Manage Alerts</Button>
+        <Button to={"/admin/members"} admin>Manage Members</Button>
+        <Button to={"/admin/challenges"} admin>Challenge Editor</Button>
+        <Button to={"/admin/docker"} admin>Docker Status</Button>
+        <Button to={"/admin/support"} admin>Access Support</Button>
     </Buttons>
 
 </Page>
