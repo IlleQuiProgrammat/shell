@@ -15,7 +15,12 @@ import HomePage from "../pages/HomePage";
 import Campaign from "../pages/Campaign";
 import Profile from "../pages/Profile";
 import About from "../pages/About";
-import AdminPanel from "../pages/AdminPanel"
+import AdminPanel from "../pages/Admin/AdminPanel"
+import ChallengeEditor from "../pages/Admin/ChallengeEditor"
+import DockerStatus from "../pages/Admin/DockerStatus"
+import ManageAlerts from "../pages/Admin/ManageAlerts"
+import Support from "../pages/Admin/Support"
+import ManageMembers from "../pages/Admin/ManageMembers"
 
 /*
 const CTFRouter = ({ location }) =>
@@ -158,7 +163,13 @@ const CTFRouter = ({ location, doAnimations }) => {
         <Route path="/privacy" exact component={Privacy } />
 
         <Route path="/about" exact component={About} />
+
         <Route path="/admin" exact component={AdminPanel} />
+        <Route path="/admin/alerts" exact component={ManageAlerts} />
+        <Route path="/admin/members" exact component={ManageMembers} />
+        <Route path="/admin/challenges" exact component={ChallengeEditor} />
+        <Route path="/admin/docker" exact component={DockerStatus} />
+        <Route path="/admin/support" exact component={Support} />
 
         {/*
         <Route path="/login" exact render={checkAuth(Login, api, false)}/>
