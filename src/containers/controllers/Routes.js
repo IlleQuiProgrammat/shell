@@ -15,6 +15,7 @@ import HomePage from "../pages/HomePage";
 import Campaign from "../pages/Campaign";
 import Profile from "../pages/Profile";
 import About from "../pages/About";
+import AdminPanel from "../pages/AdminPanel"
 
 /*
 const CTFRouter = ({ location }) =>
@@ -157,6 +158,7 @@ const CTFRouter = ({ location, doAnimations }) => {
         <Route path="/privacy" exact component={Privacy } />
 
         <Route path="/about" exact component={About} />
+        <Route path="/admin" exact component={AdminPanel} />
 
         {/*
         <Route path="/login" exact render={checkAuth(Login, api, false)}/>
