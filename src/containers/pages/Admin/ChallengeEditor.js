@@ -31,27 +31,27 @@ export default () => <Page title={'Edit Challenges'}>
         <table>
             <tr>
                 <td>Name: </td>
-                <td><Input placeholder={"Challenge 1"}></Input></td>
+                <td><Input val={"Challenge 1"}></Input></td>
             </tr>
             <tr>
                 <td>Points: </td>
-                <td><Input placeholder={"6969"}></Input></td>
+                <td><Input val={"6969"}></Input></td>
             </tr>
             <tr>
                 <td>Description: </td>
-                <td><Input placeholder={"This is a great challenge description"} rows={'5'}></Input></td>
+                <td><Input val={"This is a great challenge description"} rows={'5'}></Input></td>
             </tr>
             <tr>
                 <td>Flag Hash: </td>
-                <td><Input placeholder={"abc132"}></Input></td>
+                <td><Input val={"abc132"}></Input></td>
             </tr>
             <tr>
                 <td>Hint: </td>
-                <td><Input placeholder={"kali linux illegal"}></Input></td>
+                <td><Input val={"kali linux illegal"}></Input></td>
             </tr>
             <tr>
                 <td>Flag Format: </td>
-                <td><Input placeholder={"thebeanogamer"}></Input></td>
+                <td><Input val={"thebeanogamer"}></Input></td>
             </tr>
         </table>
         <Button>Save</Button>
