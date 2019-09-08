@@ -6,24 +6,27 @@ import theme from "theme";
 
 import Button from "../../../components/Button.js"
 
-const Buttons = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    justify-content: center;
-    margin: 0 auto;
+const Results = styled.div`
+    background-color: ${theme.bg_d2};
+    width: 800px;
+    height: 500px;
+    margin: 25px auto;
+    padding: 5px;
 `
 
 export default () => <Page title={'Edit Challenges'}>
+    <select>
+        <option value='c1'>Challenge 1</option>
+        <option value='c1'>Challenge 1</option>
+        <option value='c1'>Challenge 1</option>
+        <option value='c1'>Challenge 1</option>
+    </select>
+    <Button>Go</Button>
 
-    <Buttons>
-        <Button to={"/admin/"} admin>Challenge 1</Button>
-        <Button to={"/admin/"} admin>Challenge 1</Button>
-        <Button to={"/admin/"} admin>Challenge 1</Button>
-        <Button to={"/admin/"} admin>Challenge 1</Button>
-        <Button to={"/admin/"} admin>Challenge 1</Button>
-        <Button to={"/admin/"} admin>Challenge 1</Button>
-    </Buttons>
+    <Results>
+        <h2>Challenge 1</h2>
+    </Results>
+
 
     <Button to={"/admin"}>Back</Button>
 
