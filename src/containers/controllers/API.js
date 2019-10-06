@@ -2,6 +2,8 @@ import { withRouter } from "react-router-dom";
 import React, { Component } from "react";
 import axios from "axios";
 
+import science from "./Science";
+
 
 export const APIContext = React.createContext({
     ready: false,
@@ -92,9 +94,13 @@ class APIClass extends Component {
     }
 
     get_headers = () => {
-        return {
+        let sc = science.serialize();
+        let headers = {
             Authorization: "Bearer " + localStorage.getItem("token"),
         };
+        if (sc.length)
+            headers["X-Auth"] = sc;
+        return headers;
     }
 
     get_challenges = () => {

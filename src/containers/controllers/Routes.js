@@ -16,6 +16,8 @@ import Profile from "../pages/Profile";
 import About from "../pages/About";
 import { APIContext } from "./API";
 
+import scienceInst from "./Science"
+
 
 class Fader extends React.Component {
     constructor(props) {
@@ -102,8 +104,12 @@ const Logout = () => {
     return <Redirect to={"/"} />
 }
 
-const CTFRouter = ({ location, doAnimations }) => {
+const CTFRouter = ({ location, history, doAnimations }) => {
     const api = useContext(APIContext);
+
+    history.listen((loc, action) => {
+        scienceInst.navigation(action, loc);
+    });
 
     const body = <Switch location={location}>
         <Route path="/" exact render={() => <Redirect to={"/home"} />} />
