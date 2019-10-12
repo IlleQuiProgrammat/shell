@@ -5,13 +5,13 @@ I needed to pick a name when making the project. This is probably going to take
 ages to get properly working, so it's probably best not to touch stuff here
 until the first builds are working.
 
-## // TODO:
+## // TODO (In terms of front-end, none have backend integration yet):
 
 * [ ]  Alerts
 * [ ]  Member Manager
-* [ ]  Challenge Editor
+* [x]  Challenge Editor
 * [ ]  Docker Status
-* [ ]  Support
+* [x]  Support
 
 ## Running the SPA
 
