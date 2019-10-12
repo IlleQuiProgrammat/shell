@@ -7,9 +7,11 @@ until the first builds are working.
 
 ## // TODO:
 
-- Get a proper CI running with azure
-- Get storybook setup for testing of react components
-- Get feature partity with the MPA
+* [ ]  Alerts
+* [ ]  Member Manager
+* [ ]  Challenge Editor
+* [ ]  Docker Status
+* [ ]  Support
 
 ## Running the SPA
 
