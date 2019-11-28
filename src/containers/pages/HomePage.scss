@@ -1,6 +1,15 @@
 @import "../../Colours.scss";
 
 
+.homeGraph {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    //background: #f0f6;
+}
+
 .cardRow {
     display: flex;
     flex-direction: row;

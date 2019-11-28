@@ -352,7 +352,7 @@ const App = () => {
         setTimeout(() => { setLoaded(true) }, LOADED_TIMEOUT);
     }, []);
 
-    if (!api.siteOpen && !hasCode) return <SiteLocked setHasCode={setHasCode} setLoaded={setLoaded} />;
+    //if (!api.siteOpen && !hasCode) return <SiteLocked setHasCode={setHasCode} setLoaded={setLoaded} />;
 
     if (console) return <VimDiv />;
 
