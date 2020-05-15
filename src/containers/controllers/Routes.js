@@ -56,13 +56,11 @@ class ErrorBoundary extends React.Component {
 
 const Page = ({ title, auth, admin, noAuth, countdown, C }) => {
     const api = useContext(apiContext);
-    const endpoints = useContext(apiEndpoints);
-
     //if (!process.env.REACT_APP_NO_SITE_LOCK) {
         if (!(api.user && api.user.is_staff)) {
             if (countdown)
                 if (!api.countdown.passed[countdown])
-                    return <Countdown cdKey={countdown} onFinish={endpoints._reloadCache}/>;
+                    return <Countdown cdKey={countdown} />;
         }
     //}
 
