@@ -30,7 +30,7 @@ function useInterval(callback, delay) {
     }, [delay]);
 }
 
-export default ({ cdKey }) => {
+export default ({ cdKey, onFinish }) => {
     const api = useContext(apiContext);
     const app = useContext(appContext);
     const [countdownText, setCountdownText] = useState("");
@@ -85,6 +85,8 @@ export default ({ cdKey }) => {
             app.setLoaded(false);
             api.recheckCountdowns();
             setTimeout(() => { app.setLoaded(true); }, LOADED_TIMEOUT);
+            onFinish && onFinish();
+            wave.on && wave.audio.disconnect(wave.audio.context.destination);
         }
     }, 100);
 
